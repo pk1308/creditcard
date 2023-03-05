@@ -1,0 +1,19 @@
+Flask
+gunicorn
+pandas
+numpy
+PyYAML
+six
+scikit-learn
+evidently
+dill
+matplotlib
+imblearn
+kneed
+xgboost
+seaborn
+catboost
+csv_diff
+
+
+-e .
