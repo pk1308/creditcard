@@ -1,0 +1,12 @@
+training_pipeline_config:
+  pipeline_name: CreditCard
+  artifact_dir: artifact
+
+data_ingestion_config:
+  dataset_download_id: 17J_TOaWqAWg_IQ7W0zGJeVYCJWLTSGBR
+  dataset_download_file_name : UCI_Credit_Card.csv
+  ingestion_dir : Stage00_data_ingestion
+  raw_data_dir: raw_data
+  ingested_dir: ingested_data
+  ingested_train_file: train.csv
+  ingested_test_file: test.csv
