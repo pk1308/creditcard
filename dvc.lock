@@ -1,0 +1,19 @@
+schema: '2.0'
+stages:
+  data_ingestion:
+    cmd: python src\CreditCard\components\stage00_data_ingestion.py
+    deps:
+    - path: configs\config.yaml
+      md5: ec506a24fb085f05fdfd1103a292f54b
+      size: 423
+    - path: src\CreditCard\components\stage00_data_ingestion.py
+      md5: 3bcfc6e7460fb24736d07802a0b8c33a
+      size: 4702
+    - path: src\CreditCard\config\configuration.py
+      md5: bdf9e197b8e66f0591b1000f9fc88bda
+      size: 3233
+    outs:
+    - path: artifact\Stage00_data_ingestion\
+      md5: dbe507b00a86c6fe461bbdceefcdccc5.dir
+      size: 7354636
+      nfiles: 3
