@@ -3,7 +3,7 @@ from pathlib import Path
 from pydantic import BaseModel, DirectoryPath, FilePath
 
 class DataIngestionConfig(BaseModel):
-    dataset_download_url: str
+    dataset_download_id: str
     raw_data_file_path : Path
     ingested_train_file_path :Path
     ingested_test_data_path : Path

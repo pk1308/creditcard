@@ -4,7 +4,6 @@ from CreditCard.exception import App_Exception
 from CreditCard.logging import logger
 import numpy as np
 import pandas as pd
-import gdown
 from sklearn.model_selection import StratifiedShuffleSplit
 from CreditCard.constants import *
 from CreditCard.config import ConfigurationManager
@@ -31,8 +30,9 @@ class DataIngestion:
        
         try:
             # extraction remote url to download dataset
-            logger.info(f"Downloading dataset from google")
-            gdown.download(id=dataset_download_id, output=raw_data_file_path, quiet=True)
+            logger.info(f"Downloading dataset from github")
+            raw_data_frame = pd.read_csv(dataset_download_id)
+            raw_data_frame.to_csv(raw_data_file_path , index=False)
             logger.info("Dataset unzipped successfully")
 
             return True
@@ -43,7 +43,7 @@ class DataIngestion:
     def split_data_as_train_test(self) -> DataIngestionArtifact:
         try:
             logger.info(f"{'>>' * 20}Data splitting.{'<<' * 20}")
-            raw_data_file_path = self.data_ingestion_config.raw_file_path_to_ingest
+            raw_data_file_path = self.data_ingestion_config.raw_data_file_path
             train_file_path = self.data_ingestion_config.ingested_train_file_path
             test_file_path = self.data_ingestion_config.ingested_test_data_path
 

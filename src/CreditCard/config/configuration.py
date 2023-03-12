@@ -27,7 +27,7 @@ class ConfigurationManager:
         try:
             data_ingestion_info = self.config_info.data_ingestion_config
             artifact_dir = self.pipeline_config.artifact_dir
-            dataset_download_url = data_ingestion_info.dataset_download_url
+            dataset_download_id = data_ingestion_info.dataset_download_id
             data_ingestion_dir_name = data_ingestion_info.ingestion_dir
             raw_data_dir = data_ingestion_info.raw_data_dir
             raw_file_name = data_ingestion_info.dataset_download_file_name
@@ -40,7 +40,7 @@ class ConfigurationManager:
             ingested_test_file_path = os.path.join(ingested_dir_path, data_ingestion_info.ingested_test_file)
             create_directories([os.path.dirname(raw_data_file_path), os.path.dirname(ingested_train_file_path)])
             
-            data_ingestion_config = DataIngestionConfig(dataset_download_url = dataset_download_url , 
+            data_ingestion_config = DataIngestionConfig(dataset_download_id = dataset_download_id , 
                                                         raw_data_file_path = raw_data_file_path , 
                                                         ingested_train_file_path = ingested_train_file_path , 
                                                         ingested_test_data_path  = ingested_test_file_path)

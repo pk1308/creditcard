@@ -3,7 +3,7 @@ training_pipeline_config:
   artifact_dir: artifact
 
 data_ingestion_config:
-  dataset_download_id: 17J_TOaWqAWg_IQ7W0zGJeVYCJWLTSGBR
+  dataset_download_id: https://raw.githubusercontent.com/pk1308/datasets/master/ucicredit/UCI_Credit_Card.csv
   dataset_download_file_name : UCI_Credit_Card.csv
   ingestion_dir : Stage00_data_ingestion
   raw_data_dir: raw_data

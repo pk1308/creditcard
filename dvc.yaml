@@ -1,0 +1,9 @@
+stages:
+  data_ingestion:
+    cmd: python src\CreditCard\components\stage00_data_ingestion.py
+    deps:
+      - src\CreditCard\components\stage00_data_ingestion.py
+      - configs\config.yaml
+      - src\CreditCard\config\configuration.py
+    outs:
+      - artifact\Stage00_data_ingestion\

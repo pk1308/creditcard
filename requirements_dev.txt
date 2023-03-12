@@ -24,7 +24,7 @@ ensure==1.0.2
 hydra-core
 mlflow
 pydantic
-kaggle
+gdown
 
 -e .
 
